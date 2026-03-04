@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwich - Desserts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgFull">
+    <div id="caption"></div>
+</div>
+
+<body>
+
+<header>
+    <img src="GreenwichLogo.jpg" alt="Greenwich Logo" class="logo">
+    <h1>Greenwich Pizza & Pasta</h1>
+    <nav>
+        <a href="index.html">Pizza & Pasta</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="dessert.html">Sides & Dessert</a>
+    </nav>
+</header>
+
+<section class="menu">
+    <h2>Sides & Sweets</h2>
+
+    <div class="item">
+        <img src="choco-tiramisu-frozen-cake.webp" class="food-img" onclick="openModal(this)">
+        <span>Choco Tiramisu Frozen Cake (₱45)</span>
+        <input type="number" id="pieQty" min="0" value="0">
+    </div>
+
+    <div class="item">
+        <img src="classic-choco-frozen-cake.webp" class="food-img" onclick="openModal(this)">
+        <span>Classic Choco Frozen Cake(₱55)</span>
+        <input type="number" id="brownieQty" min="0" value="0">
+    </div>
+
+ 
+
+    <div class="item">
+        <img src="creamy-caramel-frozen-cake.webp" class="food-img"onclick="openModal(this)">
+        <span>Creamy Caramel Frozen Cake (₱95)</span>
+        <input type="number" id="friesQty" min="0" value="0">
+    </div>
+
+       <div class="item">
+        <img src="garlic-sticks-w-cheese-dip.webp" class="food-img" onclick="openModal(this)">
+        <span>Garlic Sticks (₱80)</span>
+        <input type="number" id="garlicQty" min="0" value="0">
+    </div>
+
+<div class="age-section" style="margin-bottom: 15px; text-align: center;">
+    <label for="userAge" style="font-weight: bold; color: #006838;">Enter Age for Discount Check:</label>
+    <input type="number" id="userAge" placeholder="Age" min="1" style="width: 80px; padding: 5px; border: 2px solid #ffc20e; border-radius: 5px;">
+</div>
+
+
+    <button onclick="computeDessert()">Place Order</button>
+    <div id="totalDessert"><h3>Total: ₱0</h3></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

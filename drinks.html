@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwich - Drinks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgFull">
+    <div id="caption"></div>
+</div>
+
+<body>
+
+<header>
+    <img src="/GreenwichLogo.jpg" alt="Greenwich Logo" class="logo">
+    <h1>Greenwich Pizza & Pasta</h1>
+    <nav>
+        <a href="index.html">Pizza & Pasta</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="dessert.html">Sides & Dessert</a>
+    </nav>
+</header>
+
+<section class="menu">
+    <h2>Refreshing Drinks</h2>
+
+
+    <div class="item">
+        <img src="lemon_iced_tea.webp" class="food-img" onclick="openModal(this)">
+        <span>Lemon Iced Tea (₱50)</span>
+        <input type="number" id="icedTeaQty" min="0" value="0">
+    </div>
+
+    <div class="item">
+        <img src="coca-cola.webp" class="food-img" onclick="openModal(this)">
+        <span>1L Coke(₱45)</span>
+        <input type="number" id="sodaQty" min="0" value="0">
+    </div>
+
+    <div class="item">
+        <img src="pepsi.webp" class="food-img" onclick="openModal(this)">
+        <span>1L Pepsi (₱60)</span>
+        <input type="number" id="pineQty" min="0" value="0">
+    </div>
+
+    <div class="item">
+        <img src="Water_8cd439b9-8e5b-4551-9b18-1eb4f712963c.webp" class="food-img" onclick="openModal(this)">
+        <span>Bottled Water (₱25)</span>
+        <input type="number" id="waterQty" min="0" value="0">
+    </div>
+
+<div class="age-section" style="margin-bottom: 15px; text-align: center;">
+    <label for="userAge" style="font-weight: bold; color: #006838;">Enter Age for Discount Check:</label>
+    <input type="number" id="userAge" placeholder="Age" min="1" style="width: 80px; padding: 5px; border: 2px solid #ffc20e; border-radius: 5px;">
+</div>
+
+
+    <button onclick="computeDrinks()">Place Order</button>
+    <div id="totalDrinks"><h3>Total: ₱0</h3></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
